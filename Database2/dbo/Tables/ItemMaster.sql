@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[ItemMaster] (
+    [ItemId]          VARCHAR (50)    NOT NULL,
+    [ItmName]         NVARCHAR (150)  NULL,
+    [ItemNameInOL]    NVARCHAR (150)  NULL,
+    [ItemCode]        NVARCHAR (150)  NULL,
+    [CategoryId]      VARCHAR (50)    NULL,
+    [UOM_Name]        NVARCHAR (50)   NULL,
+    [SalesRate]       DECIMAL (18, 2) NULL,
+    [HSNCode]         NVARCHAR (50)   NULL,
+    [Remarks]         NVARCHAR (MAX)  NULL,
+    [EffectiveDt]     DATETIME        NULL,
+    [InEffectiveDt]   DATETIME        NULL,
+    [Status]          INT             NULL,
+    [Item_Image_Path] NVARCHAR (MAX)  NULL,
+    [IsWeightScale]   VARCHAR (50)    NULL,
+    [CreatedBy]       VARCHAR (50)    NULL,
+    [CreateDateTime]  DATETIME        NULL,
+    [UpdatedBy]       VARCHAR (50)    NULL,
+    [UpdateDateTime]  DATETIME        NULL,
+    [PinToHome]       BIT             NULL,
+    [GSTPer]          DECIMAL (18, 2) NULL,
+    [SGST]            DECIMAL (18, 2) NULL,
+    [CGST]            DECIMAL (18, 2) NULL,
+    CONSTRAINT [PK_ItemMaster] PRIMARY KEY CLUSTERED ([ItemId] ASC) WITH (FILLFACTOR = 80)
+);
+
